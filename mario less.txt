@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <cs50.h>
+int main(void)
+{
+    int n;    
+    do      
+    {
+        n = get_int("enter number of height: "); //to know number of height
+    }
+    
+    while (n <= 0 || n > 8); // start and the end     
+    for (int i = 0; i < n; i++) // loop of column
+        
+    {
+        
+        for (int j = 0; j < n; j++) //loop of row
+            
+        {            
+            if (i + j < (n - 1))
+            {
+                printf(" ");    //to print space
+            }
+            else
+            {
+                printf("#");    //to print hash
+            } 
+        }
+        printf("\n");
+    }
+}
+    
+            
+                
+                
+                 
+              
+
+                   
+                 
+          
+ 
+ 
+ 
+
