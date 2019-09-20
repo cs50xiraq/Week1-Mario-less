@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <cs50.h>
+int main(void)
+{
+    //check that the height is not negative or not heigher than 8
+    int k;
+    do
+    {
+        k = get_int("Enter Height:");
+    }
+    while (k < 1 || k > 8);
+    
+    int ro, co, col2, nocol;
+    nocol = k - 1;
+    //loop for the number of rows
+    for (ro = 1 ; ro <= k ; ro++)
+    {
+        //loop for the number of spaces indide the column
+        for (co = 1 ; co <= nocol ; co++)
+        {
+            printf(" ");
+        }
+        nocol--;     
+        // loop for the number of column 
+        for (col2 = 1 ; col2 <= ro ; col2++) 
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
