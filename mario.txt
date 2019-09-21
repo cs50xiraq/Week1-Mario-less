@@ -1,0 +1,27 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{  
+    int n, i;
+    
+    do 
+    {
+        i = get_int("Height is: ");     // User enters the height
+    } 
+    while (i < 1 || i > 8);            // The height must be                                                   between(1-8)
+    
+    for (n = 1; n <= i; n ++)          // printing columns 
+    {          
+        for (int s = i - 1 ; s >= n; s --)  // In each one decreas s                                                by one                                           
+        {                                      
+            printf(" ");                    // shift the # to the                                                   right
+        }
+        for (int j = 1; j <= n; j++)        // printing rows
+        {
+            printf("#");                     
+        }
+        printf("\n");
+    } 
+    
+}
