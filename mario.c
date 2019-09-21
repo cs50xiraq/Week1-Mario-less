@@ -1,28 +1,36 @@
-include <stdio.h> //library initialization
+#include <stdio.h> //library initialization
 #include <cs50.h>
 
 int main(void)
 {
-   int n;
-   do // to prompts the user for a positive integer
+    int height, i, j, k;
+    
+    // Get height of pyramid from user
+    do
     {
-         n = get_int("Enter the height of the pyramid: "); //get an integer
+        
+        height = get_int("Enter the height of the pyramid: ");
     }
-    while (n < 0 || n > 8);
-
-    // for loops specifying number of spaces and hashes per line
-    for (int i = 0; i < n; i++)
+    while (height < 1 || height > 8);
+    
+    // Print lines
+    for (i = 1; i <= height; i++)
     {
-
-        for (int j = n - i; j > 1; j--)
+        // Print spaces
+        for (j = 0; j < (height - i); j++)
         {
             printf(" ");
         }
-        for (int j = 1; j < i + 2; j++)
+        
+        // print hashes
+        for (k = 0; k < i; k++)
         {
             printf("#");
         }
+        
+     
+        
         printf("\n");
     }
-}
-
+    return 0;
+}   
